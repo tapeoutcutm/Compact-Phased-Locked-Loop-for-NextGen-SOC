@@ -9,21 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works --------------------------------------------pll
-it works as a pfd block for pll
-Explain how your project works --------------------------------------------pll
-it works as a pfd block for pll
-Explain how your project works --------------------------------------------pll
-it works as a pfd block for pll
+A PFD circuit is a phase frequency detector circuit, which is used to measure the phase and frequency difference between two input signals. A PFD circuit is often a part of a phase-locked loop (PLL), which is a feedback system that synchronizes the output signal of a voltage-controlled oscillator (VCO) with a reference signal. A PFD circuit can be implemented using different logic gates, such as NAND, NOR, or AND gates. A common PFD circuit consists of two edge-triggered D flip-flops and a NAND gate in the reset path.
 
 ## How to test
 
-Explain how to use your project----------------------pll
-Explain how to use your project----------------------pll
-Explain how to use your project----------------------pll
+This section will be updated later on
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any---------------------pll
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any---------------------pll
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any---------------------pll
+Requires function generator and oscilloscope for measurements. No other h/w required.
