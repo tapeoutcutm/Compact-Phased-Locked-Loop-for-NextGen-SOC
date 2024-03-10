@@ -11,11 +11,19 @@ You can also include images in this folder and reference them in the markdown. E
 
 Explain how your project works --------------------------------------------pll
 it works as a pfd block for pll
+Explain how your project works --------------------------------------------pll
+it works as a pfd block for pll
+Explain how your project works --------------------------------------------pll
+it works as a pfd block for pll
 
 ## How to test
 
 Explain how to use your project----------------------pll
+Explain how to use your project----------------------pll
+Explain how to use your project----------------------pll
 
 ## External hardware
 
+List external hardware used in your project (e.g. PMOD, LED display, etc), if any---------------------pll
+List external hardware used in your project (e.g. PMOD, LED display, etc), if any---------------------pll
 List external hardware used in your project (e.g. PMOD, LED display, etc), if any---------------------pll
