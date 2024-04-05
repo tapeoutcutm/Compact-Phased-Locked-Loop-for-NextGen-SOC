@@ -34,6 +34,7 @@ MACRO tt_um_vks_pll
   PIN ua[0]
     DIRECTION INOUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 5.400000 ;
     PORT
       LAYER met4 ;
         RECT 156.560 0.000 157.160 1.000 ;
@@ -42,6 +43,7 @@ MACRO tt_um_vks_pll
   PIN ua[1]
     DIRECTION INOUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.580000 ;
     PORT
       LAYER met4 ;
         RECT 134.480 0.000 135.080 1.000 ;
@@ -50,6 +52,7 @@ MACRO tt_um_vks_pll
   PIN ua[2]
     DIRECTION INOUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 20.799999 ;
     PORT
       LAYER met4 ;
         RECT 112.400 0.000 113.000 1.000 ;
@@ -58,6 +61,7 @@ MACRO tt_um_vks_pll
   PIN ua[3]
     DIRECTION INOUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 2.022500 ;
     PORT
       LAYER met4 ;
         RECT 90.320 0.000 90.920 1.000 ;
@@ -98,14 +102,16 @@ MACRO tt_um_vks_pll
   PIN ui_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 2.000000 ;
     PORT
       LAYER met4 ;
-        RECT 147.510 224.760 147.810 225.760 ;
+        RECT 147.510 224.750 147.810 225.750 ;
     END
   END ui_in[0]
   PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 5.000000 ;
     PORT
       LAYER met4 ;
         RECT 143.830 224.760 144.130 225.760 ;
@@ -114,6 +120,7 @@ MACRO tt_um_vks_pll
   PIN ui_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 140.150 224.760 140.450 225.760 ;
@@ -122,6 +129,7 @@ MACRO tt_um_vks_pll
   PIN ui_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 136.470 224.760 136.770 225.760 ;
@@ -130,6 +138,7 @@ MACRO tt_um_vks_pll
   PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 132.790 224.760 133.090 225.760 ;
@@ -162,6 +171,7 @@ MACRO tt_um_vks_pll
   PIN uio_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 118.070 224.760 118.370 225.760 ;
@@ -178,6 +188,7 @@ MACRO tt_um_vks_pll
   PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 110.710 224.760 111.010 225.760 ;
@@ -186,6 +197,7 @@ MACRO tt_um_vks_pll
   PIN uio_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 107.030 224.760 107.330 225.760 ;
@@ -210,6 +222,7 @@ MACRO tt_um_vks_pll
   PIN uio_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 95.990 224.760 96.290 225.760 ;
@@ -218,6 +231,7 @@ MACRO tt_um_vks_pll
   PIN uio_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 92.310 224.760 92.610 225.760 ;
@@ -226,6 +240,7 @@ MACRO tt_um_vks_pll
   PIN uio_oe[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 67.596802 ;
     PORT
       LAYER met4 ;
         RECT 29.750 224.760 30.050 225.760 ;
@@ -234,6 +249,8 @@ MACRO tt_um_vks_pll
   PIN uio_oe[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 91.085800 ;
     PORT
       LAYER met4 ;
         RECT 26.070 224.760 26.370 225.760 ;
@@ -242,6 +259,7 @@ MACRO tt_um_vks_pll
   PIN uio_oe[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 67.596802 ;
     PORT
       LAYER met4 ;
         RECT 22.390 224.760 22.690 225.760 ;
@@ -250,6 +268,7 @@ MACRO tt_um_vks_pll
   PIN uio_oe[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 67.596802 ;
     PORT
       LAYER met4 ;
         RECT 18.710 224.760 19.010 225.760 ;
@@ -258,6 +277,8 @@ MACRO tt_um_vks_pll
   PIN uio_oe[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 91.085800 ;
     PORT
       LAYER met4 ;
         RECT 15.030 224.760 15.330 225.760 ;
@@ -266,6 +287,8 @@ MACRO tt_um_vks_pll
   PIN uio_oe[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 91.085800 ;
     PORT
       LAYER met4 ;
         RECT 11.350 224.760 11.650 225.760 ;
@@ -298,6 +321,7 @@ MACRO tt_um_vks_pll
   PIN uio_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 55.510 224.760 55.810 225.760 ;
@@ -322,6 +346,7 @@ MACRO tt_um_vks_pll
   PIN uio_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
     PORT
       LAYER met4 ;
         RECT 44.470 224.760 44.770 225.760 ;
@@ -330,6 +355,7 @@ MACRO tt_um_vks_pll
   PIN uio_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
     PORT
       LAYER met4 ;
         RECT 40.790 224.760 41.090 225.760 ;
@@ -354,6 +380,8 @@ MACRO tt_um_vks_pll
   PIN uo_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    ANTENNADIFFAREA 0.511500 ;
     PORT
       LAYER met4 ;
         RECT 88.630 224.760 88.930 225.760 ;
@@ -362,6 +390,8 @@ MACRO tt_um_vks_pll
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    ANTENNADIFFAREA 0.511500 ;
     PORT
       LAYER met4 ;
         RECT 84.950 224.760 85.250 225.760 ;
@@ -370,6 +400,7 @@ MACRO tt_um_vks_pll
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 81.270 224.760 81.570 225.760 ;
@@ -378,59 +409,6 @@ MACRO tt_um_vks_pll
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
-      LAYER met4 ;
-        RECT 77.590 224.760 77.890 225.760 ;
-    END
-  END uo_out[3]
-  PIN uo_out[4]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 73.910 224.760 74.210 225.760 ;
-    END
-  END uo_out[4]
-  PIN uo_out[5]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 70.230 224.760 70.530 225.760 ;
-    END
-  END uo_out[5]
-  PIN uo_out[6]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 66.550 224.760 66.850 225.760 ;
-    END
-  END uo_out[6]
-  PIN uo_out[7]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met4 ;
-        RECT 62.870 224.760 63.170 225.760 ;
-    END
-  END uo_out[7]
-  PIN VPWR
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER met4 ;
-        RECT 1.000 5.000 2.500 220.760 ;
-    END
-  END VPWR
-  PIN VGND
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER met4 ;
-        RECT 49.000 5.000 50.500 220.760 ;
-    END
-  END VGND
-END tt_um_vks_pll
-END LIBRARY
-
+      LAYER met4 
