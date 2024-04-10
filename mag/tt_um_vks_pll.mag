@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1712663710
+timestamp 1712733612
 << metal1 >>
 rect 8414 44658 8424 44862
 rect 8724 44658 8734 44862
@@ -1099,35 +1099,35 @@ rect 22480 0 22600 768
 rect 26896 0 27016 958
 rect 31312 0 31432 1672
 use cp  cp_0 ~/pll_ssp_submission/Faisal_Tareq_Zayed_AlObaidi/magic
-timestamp 1712663710
+timestamp 1712733612
 transform 1 0 24094 0 1 7332
 box 3292 -5232 7098 -1340
 use Div  Div_0 ~/pll_ssp_submission/Khowla_Alkhulayfi
-timestamp 1712663710
+timestamp 1712733612
 transform 1 0 2194 0 -1 42140
 box -670 -832 6794 -38
 use divi_v1L  divi_v1L_0 ~/pll_ssp_submission/Nawaf/Design_Files/Design_Files/Frequency_Divider
-timestamp 1712663710
+timestamp 1712733612
 transform 1 0 980 0 1 40194
 box 974 -588 8440 630
 use divider_tap  divider_tap_0 ~/pll_ssp_submission/Abdulrahman_Alghamdi/magic
-timestamp 1712663710
+timestamp 1712733612
 transform -1 0 23266 0 1 40038
 box -402 448 6210 1246
 use NFD_tap  NFD_tap_0 ~/pll_ssp_submission/Khalid_Abdulaziz_Mohammed_Al_Zahrani/magic
-timestamp 1712663710
+timestamp 1712733612
 transform 0 -1 25184 1 0 36244
 box 1330 -2334 7908 -1136
 use Npfd  Npfd_0 ~/pll_ssp_submission/Baraa_Musa_Abdullah_Al_Harbi/magic
-timestamp 1712663710
+timestamp 1712733612
 transform -1 0 23222 0 1 38894
 box 1024 -2182 4496 646
 use Osc_v3_L  Osc_v3_L_0 ~/pll_ssp_submission/Nawaf/Design_Files/Design_Files/CurrentStarvedOscillator
-timestamp 1712663710
+timestamp 1712733612
 transform -1 0 29132 0 1 3170
 box 3508 -2212 9578 2934
 use pfd_with_buffers_tap  pfd_with_buffers_tap_0 ~/pll_ssp_submission/Abdulrahman_Alghamdi/magic
-timestamp 1712663710
+timestamp 1712733612
 transform -1 0 17586 0 1 43836
 box 1572 -1860 6566 514
 << labels >>
