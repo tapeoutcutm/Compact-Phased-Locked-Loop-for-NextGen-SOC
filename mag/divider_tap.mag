@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1712737205
+timestamp 1712816020
 << nwell >>
 rect 5986 940 6210 1246
 << pwell >>
@@ -160,31 +160,31 @@ rect 4948 678 5430 680
 rect 0 552 6148 648
 rect 5948 448 6148 552
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0
-timestamp 1712737205
+timestamp 1712816020
 transform 1 0 -230 0 1 600
 box -38 -48 130 592
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_1
-timestamp 1712737205
+timestamp 1712816020
 transform 1 0 3434 0 1 600
 box -38 -48 130 592
 use sky130_fd_sc_hd__dfxbp_1#0  x1
-timestamp 1712737205
+timestamp 1712816020
 transform 1 0 -138 0 1 600
 box -38 -48 1786 592
 use sky130_fd_sc_hd__dfxbp_1#0  x2
-timestamp 1712737205
+timestamp 1712816020
 transform 1 0 1644 0 1 600
 box -38 -48 1786 592
 use sky130_fd_sc_hd__dfxbp_1#0  x3
-timestamp 1712737205
+timestamp 1712816020
 transform 1 0 3564 0 1 600
 box -38 -48 1786 592
 use sky130_fd_sc_hd__inv_2  x4
-timestamp 1712737205
+timestamp 1712816020
 transform 1 0 5358 0 1 600
 box -38 -48 314 592
 use sky130_fd_sc_hd__inv_2  x5
-timestamp 1712737205
+timestamp 1712816020
 transform 1 0 5672 0 1 600
 box -38 -48 314 592
 << labels >>
