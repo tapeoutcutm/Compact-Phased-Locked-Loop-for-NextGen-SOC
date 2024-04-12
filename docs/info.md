@@ -34,7 +34,7 @@ This design contains individual blocks used to realize a PLL circuit. These bloc
 
 ## How to test
 
-**PFD**s with phase difference between them. Measure the output at QA and QB pins and see the pulses based on +ve or -ve phase difference between signal applied at input pins
+**PFD**: Apply input pulses with phase difference between them and A and B pins at PFD input. Observe the output at QA and QB pins with output pulses based on +ve or -ve phase difference between signal applied at input pins of PFD.
 
 **CP**: Apply input pulses at QA and QB input pins of charge pump replicating the output of PFD circuit. Based on whether QA or QB pulses are high, the output of charge pump circuit will demonstrate charging and discharging behaviour respectively. Charging and discharging rate can be controlled by changing bias voltage cp_bias to either increase of decrease current.
 
