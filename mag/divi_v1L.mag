@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713443771
+timestamp 1713524523
 << nwell >>
 rect 3218 152 3338 320
 rect 5702 50 5894 318
@@ -294,16 +294,16 @@ rect 7650 -178 7671 -126
 rect 7723 -178 7764 -126
 rect 7650 -180 7764 -178
 rect 7652 -192 7742 -180
-use sky130_fd_sc_hd__dfxbp_2#0  x1
-timestamp 1712816020
+use sky130_fd_sc_hd__dfxbp_2  x1 ~/pll/magic/divider
+timestamp 1713423503
 transform 1 0 1248 0 1 -262
 box -38 -48 1970 592
-use sky130_fd_sc_hd__dfxbp_2#0  x2
-timestamp 1712816020
+use sky130_fd_sc_hd__dfxbp_2  x2
+timestamp 1713423503
 transform 1 0 3732 0 1 -262
 box -38 -48 1970 592
-use sky130_fd_sc_hd__dfxbp_2#0  x3
-timestamp 1712816020
+use sky130_fd_sc_hd__dfxbp_2  x3
+timestamp 1713423503
 transform 1 0 6196 0 1 -266
 box -38 -48 1970 592
 << labels >>
