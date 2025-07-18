@@ -133,7 +133,10 @@ Divide-by-2 block cascaded three times to achieve divide-by-8. Buffers ensure si
 
 ## Complete PLL Circuit
 
+PLL Layout:
 ![PLL Circuit](images/pll_circuit.png) <!-- Replace with actual image path -->
+
+PLL Waveforms:
 ![PLL Transient Waveforms](images/pll_waveforms.png) <!-- Replace with actual image path -->
 
 **Key Specifications:**
@@ -172,22 +175,5 @@ A total of 8 PLL sub-block designs were submitted. Integrated die area: **160 µ
 | CL | 5 | pF |
 | IDD | 20 | µA |
 
----
 
-> **Note:** Replace all image placeholders (`images/filename.png`) with actual image paths uploaded to your repo.
-
----
-
-### ✨ **Next Steps**
-- Create a folder `images/` in your repo.  
-- Upload all circuit diagrams and layout images there.  
-- Paste this Markdown into your `README.md` file.  
-- Commit and push to update your GitHub main page.
-
----
-
-Let me know if you want:
-- A **clean GitHub README template** with badges and project info  
-- **Instructions to add images via markdown in GitHub**  
-- Or **command-line steps** for commit and push.
 
