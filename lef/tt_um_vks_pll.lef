@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_vks_pll
+MACRO tt_um_pll_delayenhance
   CLASS BLOCK ;
-  FOREIGN tt_um_vks_pll ;
+  FOREIGN tt_um_pll_delayenhance ;
   ORIGIN 0.000 0.000 ;
   SIZE 161.000 BY 225.760 ;
   PIN clk
@@ -6132,6 +6132,6 @@ MACRO tt_um_vks_pll
         RECT 134.480 1.000 135.080 4.790 ;
         RECT 156.560 1.000 157.160 8.360 ;
   END
-END tt_um_vks_pll
+END tt_um_pll_delayenhance
 END LIBRARY
 
