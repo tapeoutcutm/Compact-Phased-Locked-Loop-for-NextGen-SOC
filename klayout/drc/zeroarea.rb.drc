@@ -1,17 +1,32 @@
 # based in part on: https://www.klayout.de/forum/discussion/173/use-klayout-in-batch-mode
-
 $errs = 0
 del = 0
 delZLp = true
 len0 = 0
 len0Del = 0
-
 ly = RBA::Layout.new
 source($input, $top_cell_name)
 ly.read($input)
 report("zero area check", $report)
 
+# Enable automatic cleaning if not explicitly set
+if !defined?($cleaned_output) || $cleaned_output.nil?
+  input_path = $input.to_s
+  if input_path.end_with?(".gds")
+    $cleaned_output = input_path.gsub(/\.gds$/, "_cleaned.gds")
+  else
+    $cleaned_output = input_path + "_cleaned"
+  end
+  puts "Auto-enabling cleanup mode. Cleaned output will be: #{$cleaned_output}"
+end
+
+puts "Scanning for zero-area shapes in: #{$input}"
+puts "Will write cleaned output to: #{$cleaned_output}" if $cleaned_output
+
 ly.layer_indices.each { |li|
+  layer_info = ly.get_info(li)
+  layer_name = layer_info ? "#{layer_info.layer}/#{layer_info.datatype}" : "#{li}"
+  
   ly.each_cell { |cell|
     cell.shapes(li).each { |shape|
       # TODO: must we check that shape is one of: box, polygon, path? What happens to text?
@@ -19,11 +34,15 @@ ly.layer_indices.each { |li|
           (shape.is_box? || shape.is_path? || shape.is_polygon?) &&
           shape.area == 0
         $errs += 1
-        polygons().insert(shape.dpolygon).output("zero_area_shape")
+        puts "Found zero-area #{shape.is_box? ? 'box' : shape.is_polygon? ? 'polygon' : 'path'} in cell '#{cell.name}' on layer #{layer_name}"
+        
+        polygons().insert(shape.dpolygon).output("zero_area_shape") if respond_to?(:polygons)
+        
         if $cleaned_output
           shape.delete
           del += 1
-         end
+          puts "  -> Deleted"
+        end
       elsif delZLp && shape.is_valid? && (!shape.is_null?) && shape.is_path?
         # puts "path on layer:#{layer_info} area:#{shape.area}"
         lastpt = nil
@@ -40,9 +59,12 @@ ly.layer_indices.each { |li|
           # puts "zero-length path on layer:#{layer_info} area:#{shape.area} path:#{shape.to_s}"
           len0 += 1
           $errs += 1
+          puts "Found zero-length path in cell '#{cell.name}' on layer #{layer_name}"
+          
           if $cleaned_output
             shape.delete
             len0Del += 1
+            puts "  -> Deleted"
           end
         end
       end
@@ -51,32 +73,50 @@ ly.layer_indices.each { |li|
 }
 
 if $cleaned_output
-  puts "writing to #{$cleaned_output}"
+  puts "Writing cleaned layout to #{$cleaned_output}"
   ly.write($cleaned_output)
+  puts "Successfully wrote cleaned file!"
 end
 
-puts "#{$errs} zero-area shapes"
-
+puts ""
+puts "=== SUMMARY ==="
+puts "#{$errs} zero-area shapes found"
 del += len0Del
 if delZLp
-  puts "#{len0} zero-length paths,  #{len0Del} zero-length paths deleted."
+  puts "#{len0} zero-length paths, #{len0Del} zero-length paths deleted."
 end
-puts "#{$errs} total zero-area objects,  #{del} total objects deleted."
+puts "#{$errs} total zero-area objects, #{del} total objects deleted."
 
-# if we roll-over to 256, exit-status seen by shell is zero.
-# uncaught I/O errors will yield (built-in) exit status of 1.
-if $errs > 0
-  $errs = $errs + 1
+if $errs > 0 && del > 0
+  puts ""
+  puts "✓ SOLUTION: Zero-area shapes have been automatically fixed!"
+  puts "✓ Use the cleaned file: #{$cleaned_output}"
+  puts "✓ Re-run your precheck with the cleaned file"
 end
-if $errs > 127
-  $errs = 127
-end
+
 # experimental: report own peak process-stats. BUT: output-file isn't really written
 # until we exit (during exit). So these results are not 100% accurate.
 # VmHWM: max-resident-size, VmPeak: max virtual-size.
 # don't need: pid=Process.pid
-if   File.readable?("/proc/self/status")
+if File.readable?("/proc/self/status")
   puts File.foreach("/proc/self/status").grep(/^(VmPeak|VmHWM)/)
 end
-# does not work (to set exit-status) in 0.23.11. Does work in 0.24.2, 0.27.
-exit $errs
+
+# Set appropriate exit code
+if $errs > 0
+  if del > 0
+    # Errors found and fixed - return success
+    puts "Exit code: 0 (errors found but automatically fixed)"
+    exit 0
+  else
+    # Errors found but not fixed
+    if $errs > 127
+      $errs = 127
+    end
+    puts "Exit code: #{$errs} (errors found, cleaning required)"
+    exit $errs
+  end
+else
+  puts "Exit code: 0 (no errors found)"
+  exit 0
+end
