@@ -2,11 +2,11 @@
 
 // just a stub to keep the Tiny Tapeout tools happy
 
-module tt_um_vks_pll (
+module tt_um_pll_delayenhance (
     input  wire       VGND,
     input  wire       VPWR,
     input  wire [7:0] ui_in,
-    output wire [7:0] uo_out,
+    output wire [7:0] uo_out,pll
     input  wire [7:0] uio_in,
     output wire [7:0] uio_out,
     output wire [7:0] uio_oe,
