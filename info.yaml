@@ -50,12 +50,12 @@ pinout:
   uio[7]: "PFD-2:B"
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: "CP_bias"
-  ua[1]: "vout"
-  ua[2]: "vctrl"
-  ua[3]: "Osc_out"
-  ua[4]: "cp_bias"
-  ua[5]: "out"
+  #ua[0]: "CP_bias"
+  #ua[1]: "vout"
+  #ua[2]: "vctrl"
+  #ua[3]: "Osc_out"
+  #ua[4]: "cp_bias"
+  #ua[5]: "out"
 
 # Do not change!
 yaml_version: 6
