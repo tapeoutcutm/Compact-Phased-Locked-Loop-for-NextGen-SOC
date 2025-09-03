@@ -46,4 +46,4 @@ pinout:
 # You'll need to implement your PLL using digital components
 
 # Updated yaml version for tt09
-yaml_version: 9
+yaml_version: 6
