@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "PLL blocks"      # Project title
+  title:        "Compact Phased Locked Loop for NextGen SOC"      # Project title
   author:       "CUTM"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "This design contains blocks used in PLL circuit"      # One line description of what your project does
