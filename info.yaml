@@ -1,25 +1,23 @@
 # Tiny Tapeout project information
 project:
-  title:        "Compact Phased Locked Loop for NextGen SOC"      # Project title
-  author:       "CUTM"                                           # Your name
-  discord:      ""                                               # Optional: your discord username
+  title:        "Compact Phased Locked Loop for NextGen SOC"
+  author:       "CUTM"
+  discord:      ""
   description:  "This design contains blocks used in PLL circuit"
-  language:     "Verilog"    # Your source is Verilog stub, not pure Analog
-  clock_hz:     0            # No global digital clock used
+  language:     "Verilog"
+  clock_hz:     0
 
-  # How many tiles your design occupies? A single tile is about 167x108 µm.
-  tiles: "1x2"               # Valid: 1x1 (digital only), 1x2, 2x2, 3x2, 4x2, 6x2, or 8x2
+  tiles: "1x2"
 
-  # Top module (must start with tt_um_)
   top_module:  "tt_um_pll_delayenhance"
   
-  # Source files must be in ./src folder
-  source_files:        
+  source_files:
     - "project.v"
 
-# Pinout of your project — do not add/remove pins, just label them
+  uses_3v3: false   # No 3.3V analog supply needed
+
+# Pinout of your project (digital only)
 pinout:
-  # Digital inputs
   ui[0]: "CP-1:QA"
   ui[1]: "CP-1:QB"
   ui[2]: "FD-2:Clk"
@@ -29,7 +27,6 @@ pinout:
   ui[6]: "ref"
   ui[7]: ""
 
-  # Digital outputs
   uo[0]: "PFD-2:QA"
   uo[1]: "PFD-2:QB"
   uo[2]: "FD-2:fo_4"
@@ -39,7 +36,6 @@ pinout:
   uo[6]: "FD-4:Out_4"
   uo[7]: "FD-4:Out_8"
 
-  # Bidirectional digital pins
   uio[0]: "FD-1:fo"
   uio[1]: "FD-1:fo_by_8"
   uio[2]: "PFD-1:A"
@@ -49,15 +45,5 @@ pinout:
   uio[6]: "PFD-2:A"
   uio[7]: "PFD-2:B"
 
-  # Analog pins (up to 8). Uncomment the ones you really use.
- # ua[0]: "CP_bias"
-#  ua[1]: "vout"
-##  ua[2]: "vctrl"
-#  ua[3]: "Osc_out"
- # ua[4]: "cp_bias"
-#  ua[5]: "out"
- # ua[6]: ""
- # ua[7]: ""
-
-# Do not change this!
+# Do not change!
 yaml_version: 6
