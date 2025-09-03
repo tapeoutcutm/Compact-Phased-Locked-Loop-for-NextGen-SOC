@@ -1,49 +1,63 @@
+# Tiny Tapeout project information
 project:
-  title:        "Compact Phased Locked Loop for NextGen SOC"
-  author:       "CUTM"
-  discord:      ""
+  title:        "Compact Phased Locked Loop for NextGen SOC"      # Project title
+  author:       "CUTM"                                           # Your name
+  discord:      ""                                               # Optional: your discord username
   description:  "This design contains blocks used in PLL circuit"
-  language:     "Verilog"  # Changed from "Analog" as tt09 requires digital implementation
-  clock_hz:     0
-  tiles:        "1x2"
-  top_module:   "tt_um_pll_delayenhance"
+  language:     "Verilog"    # Your source is Verilog stub, not pure Analog
+  clock_hz:     0            # No global digital clock used
+
+  # How many tiles your design occupies? A single tile is about 167x108 µm.
+  tiles: "1x2"               # Valid: 1x1 (digital only), 1x2, 2x2, 3x2, 4x2, 6x2, or 8x2
+
+  # Top module (must start with tt_um_)
+  top_module:  "tt_um_pll_delayenhance"
+  
+  # Source files must be in ./src folder
   source_files:        
     - "project.v"
 
-# Updated pinout for tt09
+# Pinout of your project — do not add/remove pins, just label them
 pinout:
-  # Inputs: kept your original assignments where possible
-  input[0]: "CP-1:QA"
-  input[1]: "CP-1:QB"
-  input[2]: "FD-2:Clk"
-  input[3]: "FD-3:fo"
-  input[4]: ""
-  input[5]: ""
-  input[6]: "ref"
-  input[7]: ""
+  # Digital inputs
+  ui[0]: "CP-1:QA"
+  ui[1]: "CP-1:QB"
+  ui[2]: "FD-2:Clk"
+  ui[3]: "FD-3:fo"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: "ref"
+  ui[7]: ""
 
-  # Outputs: kept your original assignments
-  output[0]: "PFD-2:QA"
-  output[1]: "PFD-2:QB"
-  output[2]: "FD-2:fo_4"
-  output[3]: "FD-2:fo_8"
-  output[4]: "FD-3:fo_4"
-  output[5]: "FD-3:fo_8"
-  output[6]: "FD-4:Out_4"
-  output[7]: "FD-4:Out_8"
+  # Digital outputs
+  uo[0]: "PFD-2:QA"
+  uo[1]: "PFD-2:QB"
+  uo[2]: "FD-2:fo_4"
+  uo[3]: "FD-2:fo_8"
+  uo[4]: "FD-3:fo_4"
+  uo[5]: "FD-3:fo_8"
+  uo[6]: "FD-4:Out_4"
+  uo[7]: "FD-4:Out_8"
 
-  # Bidirectional: kept your original assignments
-  bidirectional[0]: "FD-1:fo"
-  bidirectional[1]: "FD-1:fo_by_8"
-  bidirectional[2]: "PFD-1:A"
-  bidirectional[3]: "PFD-1:B"
-  bidirectional[4]: "PFD-1:QA"
-  bidirectional[5]: "PFD-1:QB"
-  bidirectional[6]: "PFD-2:A"
-  bidirectional[7]: "PFD-2:B"
+  # Bidirectional digital pins
+  uio[0]: "FD-1:fo"
+  uio[1]: "FD-1:fo_by_8"
+  uio[2]: "PFD-1:A"
+  uio[3]: "PFD-1:B"
+  uio[4]: "PFD-1:QA"
+  uio[5]: "PFD-1:QB"
+  uio[6]: "PFD-2:A"
+  uio[7]: "PFD-2:B"
 
-# Note: Analog pins are not supported in tt09
-# You'll need to implement your PLL using digital components
+  # Analog pins (up to 8). Uncomment the ones you really use.
+  ua[0]: "CP_bias"
+  ua[1]: "vout"
+  ua[2]: "vctrl"
+  ua[3]: "Osc_out"
+  ua[4]: "cp_bias"
+  ua[5]: "out"
+  ua[6]: ""
+  ua[7]: ""
 
-# Updated yaml version for tt09
+# Do not change this!
 yaml_version: 6
